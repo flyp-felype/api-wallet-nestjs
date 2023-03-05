@@ -1,6 +1,6 @@
 
 
-[circleci-image]:https://picpay-dev-ms-cms-api.s3.amazonaws.com/Nova_Home_PP_Pro_78680e7dd0.png 
+[circleci-image]:(https://picpay-dev-ms-cms-api.s3.amazonaws.com/Nova_Home_PP_Pro_78680e7dd0.png)
 
   <p align="center">API para o Teste BackEnd PicPay.</p>
    
