@@ -1,6 +1,6 @@
 
 
-[circleci-image]:(https://picpay-dev-ms-cms-api.s3.amazonaws.com/Nova_Home_PP_Pro_78680e7dd0.png)
+![circleci-image](https://cdn-www.infobip.com/wp-content/uploads/2022/02/08143049/picpay-logo2.png)
 
   <p align="center">API para o Teste BackEnd PicPay.</p>
    
