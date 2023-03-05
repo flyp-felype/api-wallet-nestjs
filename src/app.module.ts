@@ -6,10 +6,11 @@ import { DatabaseModule } from './database/database.module';
 import { accountProvider, eventsProvider, transactionsProvider } from './repositories/providers';
 import { AccountService } from './services/account.services';
 import { TransactionsService } from './services/transactions.services';
-
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
-    DatabaseModule
+    DatabaseModule,
+    ConfigModule.forRoot()
   ],
   controllers: [AccountController, TransactionsController],
   providers: [...accountProvider,

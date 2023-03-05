@@ -1,0 +1,21 @@
+version: "3"
+
+services: 
+  api:
+    build: .
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:  
+      - .:/usr/app
+  db:
+    image: postgres:latest 
+    environment: 
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=picpay
+      - POSTGRES_DB=picpay
+    expose:
+     - "5432"
+    ports:
+      - '5432:5432' 
+    
