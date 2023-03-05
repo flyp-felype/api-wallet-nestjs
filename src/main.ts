@@ -15,7 +15,7 @@ async function bootstrap() {
     .addTag('Transactions')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api-docs', app, document);
+  SwaggerModule.setup('/', app, document);
   
   await app.listen(3000);
 }

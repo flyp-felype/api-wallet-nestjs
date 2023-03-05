@@ -4,6 +4,10 @@ services:
   api:
     build: .
     command: npm start
+    environment:
+      - DATABASE_USER=picpay
+      - DATABASE_PASSWORD=root
+      - DATABASE_LOCALHOST=db
     ports:
       - "3000:3000"
     volumes:  

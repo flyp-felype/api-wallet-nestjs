@@ -7,10 +7,10 @@ export const databaseProviders = [
     useFactory: async () => {
       const dataSource = new DataSource({
         type: 'postgres',
-        host: 'db',
+        host: process.env.DATABASE_LOCALHOST,
         port: 5432,
-        username: 'picpay',
-        password: 'root',
+        username: process.env.DATABASE_USER,
+        password: process.env.DATABASE_PASSWORD,
         database: 'picpay',
         entities: [
             __dirname + '/../**/*.entity{.ts,.js}',

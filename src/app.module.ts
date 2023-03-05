@@ -10,7 +10,9 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     DatabaseModule,
-    ConfigModule.forRoot()
+    ConfigModule.forRoot({
+      envFilePath: '.env'
+    })
   ],
   controllers: [AccountController, TransactionsController],
   providers: [...accountProvider,
