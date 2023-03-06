@@ -41,8 +41,8 @@ Para o Banco imaginei a seguinte estrutura:
 - <b>Events</b> tabela de eventos fica armazenado os tipos de eventos como Crédito, Débito, Compra, Pix, TED... qualquer evento que seja preciso adicionar no sistema basta inserir na tabela. 
 Em <b>Type</b> fica salvo o tipo de evento se é Crédito ou Débito, neste caso usei apenas os dois simbolizando crédito em conta ou débito em conta.
 Ex: 
-- Compras é um débito em conta Type = D
-- Receber pix é um crédito em conta Type = C
+-- Compras é um débito em conta Type = D
+-- Receber pix é um crédito em conta Type = C
 Assim eu consigo saber se aquele evento vai retirar ou debitar dinheiro da conta
 
 - <b>Transaction</b> é a tabela de transações onde consta o valor da transação, evento e o conta
