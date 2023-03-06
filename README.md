@@ -11,45 +11,45 @@
 
 [Nest](https://github.com/nestjs/nest) framework.
 
-## Installation
-
-```bash
-$ yarn install
-```
-
-## Running the app
-
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
 
 ## Arquitetura
-```
-- src
-- - controller
-```
+
+A API foi construída usando as sugestões da documentação do [NestJS](https://docs.nestjs.com/first-steps) e arquitetura de <b>Repository Pattern</b>.
+
+### Repository/Services
+Foi escolhido o TypeORM para gerenciamento dos repositories e banco de dados, ao invés de construir os respository manualmente, foi utilizado os repository fornecidos pelo TypeORM.
+
+Em src/services encontra toda regra da aplicação e as conexões com os repositories.
+
+### Testes
+Os testes de services está em src/services/services.spec.ts 
+
+Para os testes foi criado um DataSource especifico para teste, validando os dados comunicando com o banco.
+
+### Validações
+Para facilitar o desenvolvimento e manutenção para validação dos dados trafegados foi utilizados DTO em src/dto
 
 ## Banco
+O banco SQL escolhido foi o Postgres, com a utilização do TypeORM é possível trocar a tecnologia do banco sem mexer na regra da aplicação.
+
+### DER
+![DER](./DER-PicPay.png)
+
+Para o Banco imaginei a seguinte estrutura:
+
+- <b>Account</b> onde armazena os dados do cliente, aqui ficaria outras informações como agencia e conta.
+- <b>Events</b> tabela de eventos fica armazenado os tipos de eventos como Crédito, Débito, Compra, Pix, TED... qualquer evento que seja preciso adicionar no sistema basta inserir na tabela. 
+Em <b>Type</b> fica salvo o tipo de evento se é Crédito ou Débito, neste caso usei apenas os dois simbolizando crédito em conta ou débito em conta.
+Ex: 
+- Compras é um débito em conta Type = D
+- Receber pix é um crédito em conta Type = C
+Assim eu consigo saber se aquele evento vai retirar ou debitar dinheiro da conta
+
+- <b>Transaction</b> é a tabela de transações onde consta o valor da transação, evento e o conta
+
+
+
+
 
 ## Stay in touch
 
