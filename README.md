@@ -37,15 +37,16 @@ O banco SQL escolhido foi o Postgres, com a utilização do TypeORM é possível
 
 Para o Banco imaginei a seguinte estrutura:
 
-- <b>Account</b> onde armazena os dados do cliente, aqui ficaria outras informações como agencia e conta.
-- <b>Events</b> tabela de eventos fica armazenado os tipos de eventos como Crédito, Débito, Compra, Pix, TED... qualquer evento que seja preciso adicionar no sistema basta inserir na tabela. 
-Em <b>Type</b> fica salvo o tipo de evento se é Crédito ou Débito, neste caso usei apenas os dois simbolizando crédito em conta ou débito em conta.
-Ex: 
--- Compras é um débito em conta Type = D
--- Receber pix é um crédito em conta Type = C
+**Account** onde armazena os dados do cliente, aqui ficaria outras informações como agencia e conta.<br /><br />
+**Events** tabela de eventos fica armazenado os tipos de eventos como Crédito, Débito, Compra, Pix, TED... qualquer evento que seja preciso adicionar no sistema basta inserir na tabela. <br /><br />
+Em **Type** fica salvo o tipo de evento se é Crédito ou Débito, neste caso usei apenas os dois simbolizando crédito em conta ou débito em conta.
+<br /><br />Ex: 
+- Compras é um débito em conta Type = D
+- Receber pix é um crédito em conta Type = C
+
 Assim eu consigo saber se aquele evento vai retirar ou debitar dinheiro da conta
 
-- <b>Transaction</b> é a tabela de transações onde consta o valor da transação, evento e o conta
+**Transaction** é a tabela de transações onde consta o valor da transação, evento e o conta
 
 
 
