@@ -5,7 +5,7 @@ services:
     build: .
     command: npm start
     environment:
-      - DATABASE_USER=picpay
+      - DATABASE_USER=root
       - DATABASE_PASSWORD=root
       - DATABASE_LOCALHOST=db
     ports:
@@ -16,8 +16,8 @@ services:
     image: postgres:latest 
     environment: 
       - POSTGRES_PASSWORD=root
-      - POSTGRES_USER=picpay
-      - POSTGRES_DB=picpay
+      - POSTGRES_USER=root
+      - POSTGRES_DB=db
     expose:
      - "5432"
     ports:
