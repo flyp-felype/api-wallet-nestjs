@@ -8,8 +8,8 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe())
   const config = new DocumentBuilder()
-    .setTitle('API Wallet PicPay')
-    .setDescription('API desafio técnico para vaga de Backend na PicPay')
+    .setTitle('API Wallet')
+    .setDescription('API desafio técnico para vaga de Backend')
     .setVersion('1.0')
     .addTag('Account')
     .addTag('Transactions')
